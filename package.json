@@ -1,0 +1,25 @@
+{
+  "name": "teste_backend_niceplanet",
+  "version": "1.0.0",
+  "description": "Criaçao de uma API que possibilita à indústria cadastrar os produtores e as propriedades de sua careira de clientes para serem monitoradas pela Niceplanet",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/williamfernands/TESTE_BACKEND_NICEPLANET.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/williamfernands/TESTE_BACKEND_NICEPLANET/issues"
+  },
+  "homepage": "https://github.com/williamfernands/TESTE_BACKEND_NICEPLANET#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
