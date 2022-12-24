@@ -29,7 +29,3 @@ Instalar o módulo para reiniciar o servidor s empre que houver alteração no c
 
 Rodar o projeto com nodemon
 ### nodemon app.js
-
-
-  git config --global user.email "you@example.com"
-  git config --global user.name "Your Nane
