@@ -4,7 +4,7 @@ const router = express.Router();
 //RETORNA TODAS PROPRIEDADE
 router.get('/', (req, res, ext) => {
     res.status(200).send({
-        mensagem: 'retorna todas propriedade'
+        mensagem: 'retorna todas propriedades'
     });
 });
 

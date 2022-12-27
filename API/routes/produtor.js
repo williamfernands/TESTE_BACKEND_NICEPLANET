@@ -4,7 +4,7 @@ const router = express.Router();
 //RETORNA TODOS PRODUTOR
 router.get('/', (req, res, ext) => {
     res.status(200).send({
-        mensagem: 'retorna todos produtor'
+        mensagem: 'retorna todos produtores'
     });
 });
 
