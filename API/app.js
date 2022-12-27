@@ -1,10 +1,10 @@
 const express = require('express');
 const app = express();
 
-app.get("/", async (req, res) => {
-    res.send("Pagina Inicial");
-});
+const rotaProdutor = require('./routes/produtor');
+const rotaPropriedadde = require('./routes/propriedade');
 
-app.listen(8080, () => {
-    console.log("Servidor iniciado na porta 8080: http://localhost:8080");
-})
+app.use('/produtor', rotaProdutor);
+app.use('/propriedade', rotaPropriedadde);
+
+module.exports = app;
