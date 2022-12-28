@@ -21,11 +21,11 @@ Rodar o projeto
 ### node app.js
 
 Acesssaar o projeto no navegador
-### http://localhost:8080
+### http://localhost:3000
 
 Instalar o módulo para reiniciar o servidor s empre que houver alteração no codigo fonte
 ### npm install -g nodemon
 ### npm install --save-dev nodemon
 
 Rodar o projeto com nodemon
-### nodemon app.js
+### npm start
