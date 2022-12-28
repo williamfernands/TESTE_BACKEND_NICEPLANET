@@ -1,5 +1,7 @@
 const express = require('express');
 const router = express.Router();
+const mysql = require('../mysql').pool;
+
 
 //RETORNA TODAS PROPRIEDADE
 router.get('/', (req, res, ext) => {
@@ -10,17 +12,25 @@ router.get('/', (req, res, ext) => {
 
 //INSERE UMA PROPRIEDADE
 router.post('/', (req, res, ext) => {
+
+    const propriedade = {
+        idPropriedade: req.body.idPropriedade,
+        nomePropriedade: req.body.nomePropriedade,
+        cadastroRural: req.body.cadastroRural
+    }
+
     res.status(201).send({
-        mensagem: 'insere uma propriedade'
+        mensagem: 'insere uma propriedade',
+        propriedadeCriado: propriedade
     });
 });
 
 //RETORNA OS DADOS DA PROPRIEDADDE
-router.get('/:id_propriedade', (req, res, ext) => {
-    const id = req.params.id_produtor
+router.get('/:idPropriedade', (req, res, ext) => {
+    const id = req.params.idProdutor
         res.status(200).send({
             mensagem: 'detalhes da propriedade',
-            id_propriedade: id
+            idPropriedade: id
         });
 });
 //ALTERA UMA PROPRIEDDADE

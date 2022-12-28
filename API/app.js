@@ -4,14 +4,26 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser')
 
 const rotaProdutor = require('./routes/produtor');
-const rotaPropriedadde = require('./routes/propriedade');
+const rotaPropriedade = require('./routes/propriedade');
 
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
+app.use((req, res, next) => {
+    res.header('Acces-Control-Allow-Origin', '*' )
+    res.header('Acces-Control-Allow-Header', 
+    'Origin, X-requrested-With, Content-Type, Accept, Authorization'
+    );
+    if (req.method === 'OPTIONS') {
+        res.header('Acces-Control-Allow-Method', 'GET', 'POST', 'PUT', 'PATCH', 'DELETE');
+        return res.status(200).send({OK});
+    }
+    next();
+})
+
 app.use('/produtor', rotaProdutor);
-app.use('/propriedade', rotaPropriedadde);
+app.use('/propriedade', rotaPropriedade);
 
 app.use((req, res, next) => {
     const erro = new Error('Não encontrado');
