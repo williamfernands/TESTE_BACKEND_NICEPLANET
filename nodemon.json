@@ -2,7 +2,7 @@
     "env" : {
         "MYSQL_USER" : "root", 
         "MYSQL_PASSWORD" : "123456",
-        "MYSQL_DATABASE" : "api-niceplanetdb",
+        "MYSQL_DATABASE" : "api-niceplanetDB",
         "MYSQL_HOST" : "localhost",
         "MYSQL_PORT" : 3306
     }

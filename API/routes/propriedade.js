@@ -1,7 +1,5 @@
 const express = require('express');
 const router = express.Router();
-const mysql = require('../mysql').pool;
-
 
 //RETORNA TODAS PROPRIEDADE
 router.get('/', (req, res, ext) => {
