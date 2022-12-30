@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const mysql = require('mysql').pool;
+const mysql = require('mysql2').pool;
 
 //RETORNA TODOS PRODUTOR
 router.get('/', (req, res, ext) => {
@@ -19,14 +19,14 @@ router.get('/', (req, res, ext) => {
 //INSERE UM PRODUTOR
 router.post('/', (req, res, ext) => {
     mysql.getConnection((error, conn) => {
-        if (error) { return res.status(500).send({ error: error }) }
+        //if (error) { return res.status(500).send({ error: error }) }
         conn.query(
             'INSERT INTO produtor (nomeProdutor, cpfProdutor) VALUES (?,?)',
             [req.body.nomeProdutor, req.body.cpfProdutor],
             (error, resultado, field) => {
                 conn.release();
 
-        if (error) { return res.status(500).send({ error: error }) }
+        //if (error) { return res.status(500).send({ error: error }) }
 
                 res.status(201).send({
                     mensagem: 'Produtor inserido com sucesso!',
