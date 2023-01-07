@@ -60,7 +60,7 @@ router.post('/', (req, res, ext) => {
     })
 });
 
-//RETORNA OS DADOS DO PRODUTOR
+//RETORNA OS DADOS DE UM PRODUTOR
 router.get('/:idProdutor', (req, res, ext) => {
     mysql.getConnection((error, conn) => {
         if (error) { return res.status(500).send({ error: error }) }
